@@ -16,14 +16,24 @@ def eval(lisp):
 
     return floor
 
+
+
 def read(string):
+
+    ''' 
+    Check a string valid and clean of whitespaces, return a new string. 
+    '''
     new_string = ""
     # comprueba que la string pasada as válida
-    if check(string):
-    # si es valida limpia la string de spacios en blancos
-        new_string = parse(string)
-
     # Captura el error SyntaxisError y devuelve un mensaje del mismo
+    try:
+        if check(string):
+        # si es valida limpia la string de spacios en blancos
+            new_string = parse(string)
+    except SyntaxError as error:
+        print(f'Your string is not valid: {error}')
+
+    
     
     return new_string
 
