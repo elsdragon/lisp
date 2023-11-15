@@ -45,7 +45,7 @@ def read(string):
 
 def parse(string):
     ''' 
-    receives a string and cleans it of whitespace. 
+    RReturn a string whitout whitespaces only parenthesis chars.
     '''
     clean_string = ""
 
